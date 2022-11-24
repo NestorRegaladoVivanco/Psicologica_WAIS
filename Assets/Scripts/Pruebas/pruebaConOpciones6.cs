@@ -53,20 +53,20 @@ public class pruebaConOpciones6 : MonoBehaviour
                 elecciones[recorre].isOn=false;
             }
 
-            if(respuestaCorrecta==6)
+            if(respuestaCorrecta==6) // Si al comparar los resultados, el numero de respuestas correcta es 6, se notifica como correcto en la prueba y se le suma un punto.
             {
                 print("Prueba: "+(pruebaActual-1)+ " es Correcta" );
                 respuestasConseguidas= respuestasConseguidas+1;
             }
-            else
+            else // Si no pues solo se notifica
             {
                 print("Prueba: "+(pruebaActual-1) + " es Incorrecta" );
             }
 
-            pruebaActual = pruebaActual+1;
+            pruebaActual = pruebaActual+1; // Se mueve a la siguiente prueba.
         }
         
-        if ((puzzleVisual.transform.GetChild(0).gameObject).activeSelf == true)
+        if ((puzzleVisual.transform.GetChild(0).gameObject).activeSelf == true) // Se notifica el inicio de la prueba de puzzles
         {
             print("Comienza prueba puzzles" );
             pruebaActual = pruebaActual+1;
@@ -74,9 +74,4 @@ public class pruebaConOpciones6 : MonoBehaviour
 
     }
 
-    //public int ObtenerPuntuacion()
-    //{
-//
-    //    return 0;
-    //}
 }
