@@ -15,7 +15,7 @@ public class informacionPruebas : MonoBehaviour
     private void Start()
     {
         burbujaDeTexto = GameObject.Find("Canvas/Interfaz/Basica/burbujaDeInstrucciones");
-        instruccionesEventos = new string []{
+        instruccionesEventos = new string []{ // Son los textos de ayuda que muestra el globo de intrucciones, para cada evento.
             
             /*Cubos*/"Imita la imagen de la derecha utilizando los cubos, moviendolos con el raton y utilizando las flechas para rotar el cubo asta conseguir que sean iguales.",
             /*Matrices*/"Selecciona una de las 5 opciones que concuerda con la imagen de arriba.",
@@ -27,13 +27,13 @@ public class informacionPruebas : MonoBehaviour
         };
     }
     public void leerInstruccionDelEvento()
-    {
-         if (burbujaDeTexto.activeSelf == false)
+    { // Control del boton para mostrar las intrucciones.
+         if (burbujaDeTexto.activeSelf == false) // Si esta apagado y le apretan, se muestra las intrucciones
         {
             burbujaDeTexto.SetActive(true);
             cuadroDeTextoInstrucciones.text = instruccionesEventos[eventoActual.numDeEvento];
         }
-        else
+        else // Si no los apaga.
         {
             burbujaDeTexto.SetActive(false);
         }
