@@ -7,23 +7,25 @@ public class ControlDeEventos : MonoBehaviour
     public int numDeEvento = 0, numDePrueba = 0;
     public int numDePruebaSeleccionada;
     private bool terminar=false;
-    #region Nota de los eventos
+
+    #region Notas de los eventos
     //numDeInterfaz si es 0 = cubos, 1 = cuadro de texto, 2 = opciones5, 3 = opciones6
-    // numDeEvento-nombre - numDeInterfaz
-    // 0-Cubos - 0
-    // 1-Matrices - 2
-    // 2-Vocabulario - 1 (respuesta descriptiva)?
-    // 3-Aritmetica - 1
-    // 4-Puzles Visuales - 3
-    // 5-Balanzas - 2
-    // 6-Figuras incompletas - 1 (apuntar y escribir)?
+    // numDeEvento  -nombre             - numDeInterfaz
+    //      0       -Cubos                  - 0
+    //      1       -Matrices               - 2
+    //      2       -Vocabulario            - 1 (respuesta descriptiva)?
+    //      3       -Aritmetica             - 1
+    //      4       -Puzles Visuales        - 3
+    //      5       -Balanzas               - 2
+    //      6       -Figuras incompletas    - 1 (apuntar y escribir)?
     #endregion
 
     void Start()
-    {
+    {   //Se utiliza para hacer pruebas en un evento especifico o para cuando el usuario selecciona un evento.
         numDePruebaSeleccionada=ControlDeEscenas.eventoSeleccionado;
     }
-    public void mostrarInterfazPrueba(int numDeInterfaz)
+
+    public void mostrarInterfazPrueba(int numDeInterfaz) // Control de interfaz donde desactiva y activa.
     {
         GameObject uiInterfaz, uiPrueba;
         uiInterfaz = GameObject.Find("Canvas/Interfaz/Pruebas");
@@ -40,25 +42,25 @@ public class ControlDeEventos : MonoBehaviour
 
     }
 
-    private int acomodoDePruebaInterfaz(int numDePrueba)
+    private int acomodoDePruebaInterfaz(int numDePrueba) // Eventos que comparten la misma interfaz.
     {
-        if (numDePrueba == 0)
+        if (numDePrueba == 0) // Interfaz cubos
         {
             return 0;
         }
-        else if (numDePrueba == 2 || numDePrueba == 3 || numDePrueba == 6)
+        else if (numDePrueba == 2 || numDePrueba == 3 || numDePrueba == 6) // Interfaz cuadro de texto
         {
             return 1;
         }
-        else if (numDePrueba == 1 || numDePrueba == 5)
+        else if (numDePrueba == 1 || numDePrueba == 5) // opciones de 5
         {
             return 2;
         }
-        else if (numDePrueba == 4)
+        else if (numDePrueba == 4) // opciones de 6
         {
             return 3;
         }
-        else {
+        else { // error
             return -1;
         }
     }
