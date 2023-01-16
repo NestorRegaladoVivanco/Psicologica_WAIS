@@ -21,6 +21,7 @@ public class mostrarPuntuacion : MonoBehaviour
 
     public void mostrarPuntos()
     {
+        // Al final de cada prueba, muestra los resultados de cada evento.
         if(eventos.numDeEvento == 1 && eventos.numDePrueba == 0 ||eventos.numDeEvento == 0 && eventos.numDePrueba == 3) // Cubos
         {
             puntos.SetActive(true);
