@@ -368,12 +368,15 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/ControlDeEscenas.cs"
-"Assets/Scripts/ControlDeEventos.cs"
-"Assets/Scripts/mostrarPuntuacion.cs"
-"Assets/Scripts/Pruebas/informacionPruebas.cs"
-"Assets/Scripts/Pruebas/pruebaConOpciones6.cs"
-"Assets/Scripts/Pruebas/pruebaConOpcionesDe5.cs"
-"Assets/Scripts/Pruebas/pruebaCuadroDeRespuesta.cs"
+"Assets/Scripts/ControlDeEventosv2.cs"
+"Assets/Scripts/pruebasV2/Dropdawn/capturaDeDropdawn.cs"
+"Assets/Scripts/pruebasV2/Dropdawn/respuestaDeDropdawn.cs"
+"Assets/Scripts/pruebasV2/informacionPruebas.cs"
+"Assets/Scripts/pruebasV2/puntuacionDeEventos.cs"
+"Assets/Scripts/pruebasV2/TextMeshPro/capturaDeTextMeshPro.cs"
+"Assets/Scripts/pruebasV2/TextMeshPro/respuestasDeTextMeshPro.cs"
+"Assets/Scripts/pruebasV2/Toggle/capturaDeToggles.cs"
+"Assets/Scripts/pruebasV2/Toggle/respuestaToggle.cs"
 -langversion:9.0
 
 /deterministic

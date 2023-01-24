@@ -6,7 +6,7 @@ using TMPro;
 
 public class informacionPruebas : MonoBehaviour
 {
-    public ControlDeEventos eventoActual;
+    public ControlDeEventosv2 eventoActual;
     private GameObject burbujaDeTexto;
     private string[] instruccionesEventos;
     [SerializeField]
