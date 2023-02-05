@@ -47,7 +47,7 @@ public class capturaDeDropdawn : MonoBehaviour
     {
         int pruebaActual = controlDeEventos.numDePrueba-2; // Control del orden de la prueba actual.
         #region Matrices
-        if(controlDeEventos.numDeEvento==1 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasMatricez+2) // Espera al evento de Puzzle Visual
+        if(controlDeEventos.numDeEvento==3 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasMatricez+2) // Espera al evento de Puzzle Visual
         {
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
                 print("Inicia Matrices");
@@ -65,7 +65,7 @@ public class capturaDeDropdawn : MonoBehaviour
         }
         #endregion
         #region Balanzas
-        if(controlDeEventos.numDeEvento==5 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasBalanzas+2) // Espera al evento de Puzzle Visual
+        if(controlDeEventos.numDeEvento==11 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasBalanzas+2) // Espera al evento de Puzzle Visual
         {
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
                 print("Inicia Balanzas");

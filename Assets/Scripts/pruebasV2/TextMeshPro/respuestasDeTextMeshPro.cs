@@ -5,4 +5,5 @@ using UnityEngine;
 public class respuestasDeTextMeshPro : MonoBehaviour
 {
     public string[] resultado;
+    public int limite;
 }

@@ -18,11 +18,19 @@ public class informacionPruebas : MonoBehaviour
         instruccionesEventos = new string []{ // Son los textos de ayuda que muestra el globo de intrucciones, para cada evento.
             
             /*Cubos*/"Imita la imagen de la derecha utilizando los cubos, moviendolos con el raton y utilizando las flechas para rotar el cubo asta conseguir que sean iguales.",
+        /*Semejanzas*/"Intrucciones semejanzas",
+        /*Digitos*/"Intrucciones Digitos",
             /*Matrices*/"Selecciona una de las 5 opciones que concuerda con la imagen de arriba.",
             /*Vocabulario*/"Imagen: Escribe el objeto de se muestra. \nPalabra: Escribe la definicion palabra que se muestra.",
             /*Aritmetica*/"Escribe lo que se indica el problema.",
+        /*Busqueda de Simbolos*/"Intrucciones Busqueda de simbolos",
             /*PuzzlesVisuales*/"De las 6 opciones que se presenta, selecciona 3 para reconstruir el puzle presentado.",
+        /*Informacion*/"Intrucciones Informacion",
+        /*Clave de numeros*/"Intrucciones Clave de numeros",
+        /*Letras y numeros*/"Intrucciones Letras y numeros",
             /*Balanzas*/"Selecciona entre las 5 opciones la pesa faltante para equilibrar los platillos.",
+        /*Comprension*/"Intrucciones Comprension",
+        /*Cancelacion*/"Intrucciones Cancelacion",
             /*FigurasIncompletas*/"Escrible que es lo que le falta a la imagen."
         };
     }
@@ -38,5 +46,4 @@ public class informacionPruebas : MonoBehaviour
             burbujaDeTexto.SetActive(false);
         }
     }
-
 }

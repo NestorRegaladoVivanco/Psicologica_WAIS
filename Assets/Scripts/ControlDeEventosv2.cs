@@ -19,7 +19,7 @@ public class ControlDeEventosv2 : MonoBehaviour
         3 = opciones6 (Toggle)
     */
 
-    /*
+    /* Orden de Eventos antiguos
     numDeEvento  -nombre             - numDeInterfaz
         0       -Cubos                  - 0
         1       -Matrices               - 2
@@ -28,6 +28,25 @@ public class ControlDeEventosv2 : MonoBehaviour
         4       -Puzles Visuales        - 3
         5       -Balanzas               - 2
         6       -Figuras incompletas    - 1 (apuntar y escribir)?
+    */ 
+
+    /* Orden de los eventos faltantes
+    numDeEvento  -nombre             - numDeInterfaz
+        0       -Cubos                  - 0
+-       1       -Semejanzas             - 1 87pdf
+-       2       -Digitos                - 1 (Implementar audio y que aparesca el cuadro de texto despues de reproducirlo?)100pdf
+        3       -Matrices               - 2 106pdf
+        4       -Vocabulario            - 1 (respuesta descriptiva)? 111pdf
+        5       -Aritmetica             - 1 128pdf (agregar faltantes)
+-       6       -Busqueda de Simbolos   - 4 mover imagen transparente
+        7       -Puzles Visuales        - 3
+-       8       -Informacion            - 1 145pdf
+-       9       -Clave de numeros       - 4 mover imagen transparente
+-       10      -Letras y numeros       - 1 159pdf
+        11      -Balanzas               - 2
+-       12      -Comprension            - 1 171pdf
+-       13      -Cancelacion            - 4 mover imagen transparente
+        14       -Figuras incompletas    - 1 (apuntar y escribir)?
     */ 
     #endregion
 
@@ -59,7 +78,7 @@ public class ControlDeEventosv2 : MonoBehaviour
                 uiPrueba.SetActive(false);
             }
         }
-
+    
     private int acomodoDePruebaInterfaz(int numDeEvento) // Eventos que comparten la misma interfaz.
     {
         int numInterfaz;
@@ -68,14 +87,17 @@ public class ControlDeEventosv2 : MonoBehaviour
             case 0: // Interfaz cubos
                 numInterfaz = 0;
                 break;
-            case 2: case 3: case 6: // Interfaz cuadro de texto (TextMeshPro)
+            case 1: case 2: case 4: case 5: case 8: case 10: case 12: case 14:// Interfaz cuadro de texto (TextMeshPro)
                 numInterfaz =  1;
                 break; 
-            case 1:  case 5: // opciones de 5 (dropDown)
+            case 3: case 11: // opciones de 5 (dropDown)
                 numInterfaz =  2;
                 break;
-            case 4: // opciones de 6 (Toggle)
+            case 7: // opciones de 6 (Toggle)
                 numInterfaz =  3;
+                break;
+            case 6: case 9: case 13: // imagen transparente (Posicion?)
+                numInterfaz =  4;
                 break;
             default: // error
                 numInterfaz =  -1;
@@ -113,7 +135,7 @@ public class ControlDeEventosv2 : MonoBehaviour
             #endregion
             //Mientras el evento actual tenga pruebas
             if (numDePrueba < eventoActual.transform.childCount)
-            {
+            {   
                 GameObject pruebaActual = eventoActual.transform.GetChild(numDePrueba).gameObject;
                 print("Evento: " + eventoActual.transform.GetSiblingIndex());
                 print("Prueba: " + pruebaActual.transform.GetSiblingIndex());
@@ -122,10 +144,14 @@ public class ControlDeEventosv2 : MonoBehaviour
                 // Si es la primera prueba solo lo muestra
                 if (numDePrueba == 0)
                 {
+                    //List<time>[0].start() <----- Aqui solo empiza la primera prueba
                     pruebaActual.SetActive(true);
                 } 
                 else // Oculta la prueba anterior y muestra la siguiente
                 {
+                    // List<time>[numDePrueba - 1].stop  <------------ Para la prueba anterior
+                    // List<time>[numDePrueba].start    <----------- comienza la sig prueba
+
                     eventoActual.transform.GetChild(numDePrueba - 1).gameObject.SetActive(false);
                     pruebaActual.SetActive(true);
                 }
@@ -145,7 +171,6 @@ public class ControlDeEventosv2 : MonoBehaviour
                     numDePrueba = 0;
                 }
             }
-
         }
         //Si se acaba los eventos o se termina
         if(numDeEvento >= eventos.transform.childCount || terminar){

@@ -36,16 +36,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\pruebasV2\informacionPruebas.cs" />
-     <Compile Include="Assets\Scripts\ControlDeEscenas.cs" />
-     <Compile Include="Assets\Scripts\pruebasV2\TextMeshPro\respuestasDeTextMeshPro.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\puntuacionDeEventos.cs" />
      <Compile Include="Assets\Scripts\pruebasV2\TextMeshPro\capturaDeTextMeshPro.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\Cubos\respuestasCubos.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\informacionPruebas.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\Toggle\capturaDeToggles.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\TextMeshPro\respuestasDeTextMeshPro.cs" />
+     <Compile Include="Assets\Scripts\ControlDeEscenas.cs" />
      <Compile Include="Assets\Scripts\pruebasV2\Dropdawn\capturaDeDropdawn.cs" />
      <Compile Include="Assets\Scripts\pruebasV2\Toggle\respuestaToggle.cs" />
      <Compile Include="Assets\Scripts\pruebasV2\Dropdawn\respuestaDeDropdawn.cs" />
-     <Compile Include="Assets\Scripts\pruebasV2\Toggle\capturaDeToggles.cs" />
      <Compile Include="Assets\Scripts\ControlDeEventosv2.cs" />
-     <Compile Include="Assets\Scripts\pruebasV2\puntuacionDeEventos.cs" />
+     <Compile Include="Assets\Scripts\pruebasV2\Cubos\capturaCubo.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

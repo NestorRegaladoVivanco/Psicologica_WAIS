@@ -17,7 +17,7 @@ public class capturaDeToggles : MonoBehaviour
     public void resultadosDePuzzleVisual()
     {
         int pruebaPuzzle = controlDeEventos.numDePrueba-2;
-        if(controlDeEventos.numDeEvento==4 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebas+2) // Espera al evento de Puzzle Visual
+        if(controlDeEventos.numDeEvento==7 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebas+2) // Espera al evento de Puzzle Visual
         {
             if(pruebaPuzzle == 0){ // Anuncia el comienzo del evento
                 print("Inicia PuzzleVisual");

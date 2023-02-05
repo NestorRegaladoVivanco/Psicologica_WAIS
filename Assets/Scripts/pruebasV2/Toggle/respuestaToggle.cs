@@ -5,6 +5,7 @@ using UnityEngine;
 public class respuestaToggle : MonoBehaviour
 {
     public bool[] respuestas;    
+    public int limite;
 
     public void setRespuestas(bool[] n_respuestas)
     {
