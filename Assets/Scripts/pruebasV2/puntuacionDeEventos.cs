@@ -20,45 +20,45 @@ public class puntuacionDeEventos : MonoBehaviour
     [SerializeField]
     private capturaDeToggles numToggles;
 
-
+    private int pruebaAnterior;
     void Start()
     {
-        
+        pruebaAnterior=-1;
     }
 
-    public void mostrarPuntos()
+    private void mostrarPuntos()
     {   // Cubos
-        if(eventos.numDeEvento == 0 && eventos.numDePrueba == 3)
+        if(eventos.numDeEvento == 0 && eventos.numDePrueba == 2)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[0].text= "--";
         } 
         // Semejanzas
-        else if(eventos.numDeEvento == 1 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasSemejanzas + 1)
+        else if(eventos.numDeEvento == 1 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasSemejanzas)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[1].text = "--";
         }
         // Digitos 
-        else if(eventos.numDeEvento == 2 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasDigitos + 1)
+        else if(eventos.numDeEvento == 2 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasDigitos)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[2].text = "--";
         }
         // Matrices 
-        else if(eventos.numDeEvento == 3 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasMatricez+ 1)
+        else if(eventos.numDeEvento == 3 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasMatricez)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[3].text = numDropdawn.respuestasCorrectasMatriz.ToString();
         }
         // Vocabulario 
-        else if(eventos.numDeEvento == 4 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasVocabulario+1)
+        else if(eventos.numDeEvento == 4 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasVocabulario)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[4].text = numTextMeshPro.puntuacionVocabulario.ToString();
         }
         // Aritmetica 
-        else if(eventos.numDeEvento == 5 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasAritmetica +1)
+        else if(eventos.numDeEvento == 5 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasAritmetica)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[5].text = numTextMeshPro.puntuacionAritmetica.ToString();
@@ -70,13 +70,13 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[6].text = "--";
         }
         // Puzzles visaules
-        else if(eventos.numDeEvento == 7 && eventos.numDePrueba == capturaDeToggles.numDePruebas+1)
+        else if(eventos.numDeEvento == 7 && eventos.numDePrueba == capturaDeToggles.numDePruebas)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[7].text = numToggles.puntuacionDePuzzleVisual.ToString();
         }
         // Informacion
-        else if(eventos.numDeEvento == 8 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasInformacion +1)
+        else if(eventos.numDeEvento == 8 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasInformacion)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[8].text = "--";
@@ -88,19 +88,19 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[9].text = "--";
         }
          // Letras y numeros
-        else if(eventos.numDeEvento == 10 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasLetrasNumeros +1)
+        else if(eventos.numDeEvento == 10 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasLetrasNumeros)
         {
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[10].text = "--";
         }
         // Balanzas
-        else if(eventos.numDeEvento == 11 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasBalanzas+1)
+        else if(eventos.numDeEvento == 11 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasBalanzas)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[11].text = numDropdawn.respuestasCorrectasBalanza.ToString();
         }
         // Comprension
-        else if(eventos.numDeEvento == 12 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasComprension + 1)
+        else if(eventos.numDeEvento == 12 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasComprension)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[12].text = "--";
@@ -112,7 +112,7 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[13].text = "--";
         }
         // Figuras incompletas
-        else if(eventos.numDeEvento == 14 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasFigIncompleta+1)
+        else if(eventos.numDeEvento == 14 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasFigIncompleta)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[14].text = numTextMeshPro.puntuacionFigIncompleta.ToString();
@@ -122,5 +122,12 @@ public class puntuacionDeEventos : MonoBehaviour
         }
 
         
+    }
+
+    void Update(){
+        if(pruebaAnterior != eventos.numDePrueba){
+            pruebaAnterior = eventos.numDePrueba;
+            mostrarPuntos();
+        }
     }
 }

@@ -9,7 +9,7 @@ public class ControlDeEventosv2 : MonoBehaviour
                 numDePruebaSeleccionada;
 
     private bool terminar=false;
-
+    private int pruebaAnterior;
     #region Notas de los eventos
     /*
     numDeInterfaz 
@@ -62,6 +62,7 @@ public class ControlDeEventosv2 : MonoBehaviour
             numDeEvento=0;
         }
         numDePrueba=0;
+        pruebaAnterior=-1;
     }
 
     private void controDeInferfazDePruebas(int numDeInterfaz) //Dependiendo de "numDeInterfaz", se mostrara la interfaz deseada
@@ -109,12 +110,12 @@ public class ControlDeEventosv2 : MonoBehaviour
 
     public void recorerEventos( )
     {
-        GameObject  eventos = GameObject.Find("Eventos"),
-                    eventoActual=eventos.transform.GetChild(numDeEvento).gameObject;
+        GameObject  eventos = GameObject.Find("Eventos");
 
         // Mientras tenga eventos o aun no termine.
         if(numDeEvento < eventos.transform.childCount || terminar==false)
         {
+            GameObject eventoActual=eventos.transform.GetChild(numDeEvento).gameObject;
             #region Asignacion de Interfas por prueba
             //Si es el primer evento y prueba
             if (numDePrueba == 0)
@@ -155,7 +156,7 @@ public class ControlDeEventosv2 : MonoBehaviour
                     eventoActual.transform.GetChild(numDePrueba - 1).gameObject.SetActive(false);
                     pruebaActual.SetActive(true);
                 }
-                numDePrueba = numDePrueba + 1;
+                //numDePrueba = numDePrueba + 1;
 
                 if(numDePrueba >= eventoActual.transform.childCount){
                     pruebaActual.SetActive(false);
@@ -173,11 +174,21 @@ public class ControlDeEventosv2 : MonoBehaviour
             }
         }
         //Si se acaba los eventos o se termina
-        if(numDeEvento >= eventos.transform.childCount || terminar){
+        if(numDeEvento == 14 && numDePrueba == 25 || terminar){
             GameObject ocutarSiguiente = GameObject.Find("Canvas/Interfaz/Basica/boton_Siguiente");
             ocutarSiguiente.SetActive(false);
             print("Termino los eventos");
         }
     }
 
+    public void boton_Siguiente(){
+        numDePrueba = numDePrueba + 1;
+    }
+
+    void Update(){
+        if(pruebaAnterior != numDePrueba){
+            pruebaAnterior = numDePrueba;
+            recorerEventos();
+        }
+    }
 }

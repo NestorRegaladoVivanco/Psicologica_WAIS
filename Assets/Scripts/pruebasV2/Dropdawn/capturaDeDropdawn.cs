@@ -21,6 +21,7 @@ public class capturaDeDropdawn : MonoBehaviour
     private int[] resultadosMatricez = new int [numDePruebasMatricez];
     private int[] resultadosBalanzas = new int [numDePruebasBalanzas]; 
 
+    private int pruebaAnterior;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,32 +41,12 @@ public class capturaDeDropdawn : MonoBehaviour
         // Se inicializa las respuestas conseguidas del evento de:
         respuestasCorrectasMatriz=0; // Matricez
         respuestasCorrectasBalanza=0; // Balanzas
-
+        pruebaAnterior=-1;
     }
 
-    public void resultadosDeDropdawn()
+    private void eventoBalanzas(int pruebaActual)
     {
-        int pruebaActual = controlDeEventos.numDePrueba-2; // Control del orden de la prueba actual.
-        #region Matrices
-        if(controlDeEventos.numDeEvento==3 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasMatricez+2) // Espera al evento de Puzzle Visual
-        {
-            if(pruebaActual == 0){ // Anuncia el comienzo del evento
-                print("Inicia Matrices");
-            }
-            print(resultadosMatricez[pruebaActual]+" = "+dropDown.value);
-            if(resultadosMatricez[pruebaActual] == dropDown.value) // Si es correcto, suma un punto y lo notifica
-            {
-                print("Prueba: "+(pruebaActual)+ " es Correcta" );
-                respuestasCorrectasMatriz = respuestasCorrectasMatriz+1;
-            }
-            else // Si no es correcto, solo lo notifica
-            {
-                print("Prueba: "+(pruebaActual) + " es Incorrecta" );
-            }
-        }
-        #endregion
-        #region Balanzas
-        if(controlDeEventos.numDeEvento==11 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasBalanzas+2) // Espera al evento de Puzzle Visual
+        if(controlDeEventos.numDeEvento==11 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasBalanzas+1) // Espera al evento de Puzzle Visual
         {
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
                 print("Inicia Balanzas");
@@ -81,8 +62,35 @@ public class capturaDeDropdawn : MonoBehaviour
                 print("Prueba: "+(pruebaActual) + " es Incorrecta" );
             }
         }
-        #endregion
-        dropDown.value=0; // Se reinicia el estado del dropdawn a la primera posicion.
+    }
+
+    private void eventoMatrices(int pruebaActual){
+        if(controlDeEventos.numDeEvento==3 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasMatricez+1) // Espera al evento de Puzzle Visual
+        {
+            if(pruebaActual == 0){ // Anuncia el comienzo del evento
+                print("Inicia Matrices");
+            }
+            print(resultadosMatricez[pruebaActual]+" = "+dropDown.value);
+            if(resultadosMatricez[pruebaActual] == dropDown.value) // Si es correcto, suma un punto y lo notifica
+            {
+                print("Prueba: "+(pruebaActual)+ " es Correcta" );
+                respuestasCorrectasMatriz = respuestasCorrectasMatriz+1;
+            }
+            else // Si no es correcto, solo lo notifica
+            {
+                print("Prueba: "+(pruebaActual) + " es Incorrecta" );
+            }
+        }
+    }
+
+    void Update(){
+        if(pruebaAnterior!=controlDeEventos.numDePrueba){
+            pruebaAnterior=controlDeEventos.numDePrueba;
+            int pruebaActual = controlDeEventos.numDePrueba-1; // Control del orden de la prueba actual.
+            eventoMatrices(pruebaActual);
+            eventoBalanzas(pruebaActual);
+            dropDown.value=0; // Se reinicia el estado del dropdawn a la primera posicion.
+        }
     }
 
 }

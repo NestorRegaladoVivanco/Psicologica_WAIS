@@ -26,6 +26,8 @@ public class capturaDeTextMeshPro : MonoBehaviour
     public static int numDePruebasComprension=18;
     public static int numDePruebasFigIncompleta=25;
 
+    private int pruebaAnterior;
+
     private GameObject  pruebasVocabulario,
                         pruebasAritmetica,
                         pruebasFigIncompleta;
@@ -37,7 +39,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
         puntuacionVocabulario=0;
         puntuacionAritmetica=0;
         puntuacionFigIncompleta=0;
-
+        pruebaAnterior=-1;
         pruebasVocabulario = GameObject.Find("Eventos/Vocabulario");
         pruebasAritmetica = GameObject.Find("Eventos/Aritmetica");
         pruebasFigIncompleta = GameObject.Find("Eventos/FigurasIncompletas");
@@ -56,12 +58,9 @@ public class capturaDeTextMeshPro : MonoBehaviour
         return contador;
     } 
 
-    public void resultadosDeTextMeshPro()
+    public void eventoVocabulario(int pruebaActual)
     {
-        int pruebaActual = controlDeEventos.numDePrueba-2; // Control del orden de la prueba actual.
-        
-        #region Vocabulario
-        if(controlDeEventos.numDeEvento==4 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasVocabulario+2) // Espera al evento de Puzzle Visual
+        if(controlDeEventos.numDeEvento==4 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasVocabulario+1) // Espera al evento de Puzzle Visual
         {
             var respuestas = (string[])((pruebasVocabulario.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
@@ -90,10 +89,9 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 }
             }
         }
-        #endregion
-
-        #region Aritmetica
-        if(controlDeEventos.numDeEvento==5 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasAritmetica+2) // Espera al evento de Puzzle Visual
+    }
+    private void eventoAritmetica(int pruebaActual){
+        if(controlDeEventos.numDeEvento==5 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasAritmetica+1) // Espera al evento de Puzzle Visual
         {
             var respuestas = (string[])((pruebasAritmetica.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
@@ -107,10 +105,10 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 print("Insuficiente");
             }
         }
-        #endregion
+    }
 
-        #region FigIncompleta
-        if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+2) // Espera al evento de FigIncompleta
+    private void eventoFigIncompleta (int pruebaActual){
+        if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+1) // Espera al evento de FigIncompleta
         {
             var respuestas = (string[])((pruebasFigIncompleta.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
@@ -124,10 +122,16 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 print("Insuficiente");
             }
         }
-        #endregion
-        
-        cuadroInput.text=""; // Reinicia el Input del usuario.
     }
 
-
+    void Update(){
+        if(pruebaAnterior!=controlDeEventos.numDePrueba){
+            pruebaAnterior=controlDeEventos.numDePrueba;
+            int pruebaActual = controlDeEventos.numDePrueba-1; // Control del orden de la prueba actual.
+            eventoVocabulario(pruebaActual);
+            eventoAritmetica(pruebaActual);
+            eventoFigIncompleta(pruebaActual);
+            cuadroInput.text=""; // Reinicia el Input del usuario.
+        }
+    }
 }

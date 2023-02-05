@@ -13,11 +13,29 @@ public class capturaDeToggles : MonoBehaviour
     public static int numDePruebas=28;
     private respuestaToggle[] resToggle = new respuestaToggle [numDePruebas];
     public int puntuacionDePuzzleVisual;
+    private int pruebaAnterior;
 
-    public void resultadosDePuzzleVisual()
+    // Start is called before the first frame update
+    void Start()
+    {   
+        inicializaResToggle();
+        puntuacionDePuzzleVisual=0;
+        pruebaAnterior=-1;
+    }
+
+    void inicializaResToggle()
     {
-        int pruebaPuzzle = controlDeEventos.numDePrueba-2;
-        if(controlDeEventos.numDeEvento==7 && controlDeEventos.numDePrueba>1 && controlDeEventos.numDePrueba<numDePruebas+2) // Espera al evento de Puzzle Visual
+        GameObject puzzleVisual = GameObject.Find("Eventos/PuzzlesVisuales");
+        for(int asignar=0;asignar < numDePruebas;asignar++)
+        {
+            resToggle[asignar] = (puzzleVisual.transform.GetChild(asignar).gameObject).GetComponent<respuestaToggle>();
+        }
+    }
+
+    private void eventoPuzzleVisual()
+    {
+        int pruebaPuzzle = controlDeEventos.numDePrueba-1;
+        if(controlDeEventos.numDeEvento==7 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebas+1) // Espera al evento de Puzzle Visual
         {
             if(pruebaPuzzle == 0){ // Anuncia el comienzo del evento
                 print("Inicia PuzzleVisual");
@@ -45,21 +63,12 @@ public class capturaDeToggles : MonoBehaviour
             }
         }
     }
-    void inicializaResToggle()
-    {
-        GameObject puzzleVisual = GameObject.Find("Eventos/PuzzlesVisuales");
-        for(int asignar=0;asignar < numDePruebas;asignar++)
-        {
-            resToggle[asignar] = (puzzleVisual.transform.GetChild(asignar).gameObject).GetComponent<respuestaToggle>();
+
+    void Update(){
+        if(pruebaAnterior!=controlDeEventos.numDePrueba){
+            pruebaAnterior=controlDeEventos.numDePrueba;
+            eventoPuzzleVisual();
         }
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {   
-        inicializaResToggle();
-        puntuacionDePuzzleVisual=0;
     }
 
 }
