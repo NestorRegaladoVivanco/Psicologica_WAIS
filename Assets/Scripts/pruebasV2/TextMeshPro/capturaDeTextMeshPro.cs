@@ -28,7 +28,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
     public static int numDePruebasDigitos=48;
     public static int numDePruebasVocabulario=23;
     public static int numDePruebasAritmetica=22;
-    public static int numDePruebasInformacion=18;
+    public static int numDePruebasInformacion=26;
     public static int numDePruebasLetrasNumeros=10;
     public static int numDePruebasComprension=18;
     public static int numDePruebasFigIncompleta=25;
@@ -225,6 +225,23 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
+    private void eventoInformacion(int pruebaActual){
+        if(controlDeEventos.numDeEvento==8 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasInformacion+1) // Espera al evento de Informacion
+        {
+            // Se extraen las respuestas de la prueba seleccionada
+            var respuestas = (string[])((pruebasInformacion.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
+            if(pruebaActual == 0){ // Anuncia el comienzo del evento
+                print("Inicia Informacion");
+            }
+            if(contadorDePalabras(cuadroDeTexto.text,respuestas)>0)
+            {
+                print("Sumas un punto");
+                puntuacionInformacion++;
+            }else{
+                print("Insuficiente");
+            }
+        }
+    }
     private void eventoFigIncompleta (int pruebaActual){
         if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+1) // Espera al evento de FigIncompleta
         {
@@ -251,6 +268,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             eventoDigitos(pruebaActual);
             eventoVocabulario(pruebaActual);
             eventoAritmetica(pruebaActual);
+            eventoInformacion(pruebaActual);
             eventoFigIncompleta(pruebaActual);
             cuadroInput.text=""; // Reinicia el Input del usuario.
         }
