@@ -57,7 +57,7 @@ public class ControlDeEventosv2 : MonoBehaviour
         //Si se selecciono uno, se le asigna al numDeEvento, sino pasa a ser 0
         if(numDePruebaSeleccionada!=-1){
             numDeEvento=numDePruebaSeleccionada;
-            print("Prueba seleccionada: "+numDeEvento );
+            print("Prueba seleccionada: "+ numDeEvento );
         }else{
             numDeEvento=0;
         }

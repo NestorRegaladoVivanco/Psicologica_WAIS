@@ -37,13 +37,13 @@ public class puntuacionDeEventos : MonoBehaviour
         else if(eventos.numDeEvento == 1 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasSemejanzas)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[1].text = "--";
+            cuadroDeTextoInstrucciones[1].text = numTextMeshPro.puntuacionSemejanzas.ToString();
         }
         // Digitos 
         else if(eventos.numDeEvento == 2 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasDigitos)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[2].text = "--";
+            cuadroDeTextoInstrucciones[2].text = numTextMeshPro.puntuacionDigitos.ToString();
         }
         // Matrices 
         else if(eventos.numDeEvento == 3 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasMatricez)
@@ -79,7 +79,7 @@ public class puntuacionDeEventos : MonoBehaviour
         else if(eventos.numDeEvento == 8 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasInformacion)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[8].text = "--";
+            cuadroDeTextoInstrucciones[8].text = numTextMeshPro.puntuacionInformacion.ToString();
         }
         // Clave de numeros
         else if(eventos.numDeEvento == 9 && eventos.numDePrueba == /*numDePruebasClaveDeNumeros +*/18)
@@ -91,7 +91,7 @@ public class puntuacionDeEventos : MonoBehaviour
         else if(eventos.numDeEvento == 10 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasLetrasNumeros)
         {
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[10].text = "--";
+            cuadroDeTextoInstrucciones[10].text = numTextMeshPro.puntuacionLetrasNumeros.ToString();
         }
         // Balanzas
         else if(eventos.numDeEvento == 11 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasBalanzas)
@@ -103,7 +103,7 @@ public class puntuacionDeEventos : MonoBehaviour
         else if(eventos.numDeEvento == 12 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasComprension)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[12].text = "--";
+            cuadroDeTextoInstrucciones[12].text = numTextMeshPro.puntuacionComprension.ToString();
         }
         // Cancelacion
         else if(eventos.numDeEvento == 13 && eventos.numDePrueba == /*numDePruebasCancelacion +*/18)

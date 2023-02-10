@@ -19,7 +19,7 @@ public class informacionPruebas : MonoBehaviour
             
             /*Cubos*/"Imita la imagen de la derecha utilizando los cubos, moviendolos con el raton y utilizando las flechas para rotar el cubo asta conseguir que sean iguales.",
         /*Semejanzas*/"Intrucciones semejanzas",
-        /*Digitos*/"Intrucciones Digitos",
+        /*Digitos*/"Escuche con atencion tras darle al boton podra escuchar una sola vez y tendra que poner los digitos en el orden indicado.",
             /*Matrices*/"Selecciona una de las 5 opciones que concuerda con la imagen de arriba.",
             /*Vocabulario*/"Imagen: Escribe el objeto de se muestra. \nPalabra: Escribe la definicion palabra que se muestra.",
             /*Aritmetica*/"Escribe lo que se indica el problema.",
