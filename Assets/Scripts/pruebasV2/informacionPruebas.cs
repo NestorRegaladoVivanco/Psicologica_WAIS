@@ -27,7 +27,7 @@ public class informacionPruebas : MonoBehaviour
             /*PuzzlesVisuales*/"De las 6 opciones que se presenta, selecciona 3 para reconstruir el puzle presentado.",
         /*Informacion*/"Intrucciones Informacion",
         /*Clave de numeros*/"Intrucciones Clave de numeros",
-        /*Letras y numeros*/"Intrucciones Letras y numeros",
+        /*Letras y numeros*/"Colocar los numeros en orden creciente y las letras en orden alfabetico.",
             /*Balanzas*/"Selecciona entre las 5 opciones la pesa faltante para equilibrar los platillos.",
         /*Comprension*/"Intrucciones Comprension",
         /*Cancelacion*/"Intrucciones Cancelacion",

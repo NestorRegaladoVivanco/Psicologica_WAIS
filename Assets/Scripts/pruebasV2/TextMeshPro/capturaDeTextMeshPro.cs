@@ -29,12 +29,14 @@ public class capturaDeTextMeshPro : MonoBehaviour
     public static int numDePruebasVocabulario=23;
     public static int numDePruebasAritmetica=22;
     public static int numDePruebasInformacion=26;
-    public static int numDePruebasLetrasNumeros=10;
+    public static int numDePruebasLetrasNumeros=30;
     public static int numDePruebasComprension=18;
     public static int numDePruebasFigIncompleta=25;
     #endregion
     private int pruebaAnterior; // Mantiene el control en el update.
-    private int terminaDigitos; // Mantiene el control en el update.
+    private int terminaDigitos; // Oportunidades que tiene el usuario en la prueba de digitos
+    [SerializeField]
+    private int terminaLetrasNumeros; // Oportunidades que tiene el usuario en la prueba de Numeros y Letras
     #region variables de GameObject de pruebas
     private GameObject  pruebasSemejanzas,
                         pruebasDigitos,
@@ -62,6 +64,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
         // variable para mantener el control en el update
         pruebaAnterior=-1;
         terminaDigitos=0;
+        terminaLetrasNumeros=0;
         #region Se inicializa los gameobjet de los eventos:
         pruebasSemejanzas = GameObject.Find("Eventos/Semejanzas");
         pruebasDigitos = GameObject.Find("Eventos/Digitos");
@@ -242,6 +245,40 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
+    private void eventoLetrasNumeros(int pruebaActual)
+    {
+        
+        if(controlDeEventos.numDeEvento==10 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasLetrasNumeros+1) // Espera al evento de Puzzle Visual
+        {
+            // Se extraen las respuestas de la prueba seleccionada
+            var respuestas = (string[])((pruebasLetrasNumeros.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
+            if(pruebaActual == 0){ // Anuncia el comienzo del evento
+                print("Inicia Numeros y Letras");
+            }
+            if (pruebaActual % 3 == 0 && pruebaActual != 0) // Cada numero tres pruebas, se reinicia los intentos para no terminar
+            {
+                terminaLetrasNumeros = 0; 
+            }
+            if(contadorDePalabras(cuadroDeTexto.text,respuestas)>0)
+            {
+                print("Sumas un punto");
+                puntuacionLetrasNumeros++;
+            }else{
+                print("Insuficiente");
+                terminaLetrasNumeros++;
+            }
+            //Se termina los intentos de ese evento 
+            if(terminaLetrasNumeros == 3){ 
+                pruebasLetrasNumeros.transform.GetChild(pruebaActual).gameObject.SetActive(false); // Se oculta la acutal de forma "manual"
+                print("Se termino la prueba de Digitos crecientes, por intentos");
+                controlDeEventos.numDePrueba = numDePruebasLetrasNumeros;
+            }
+        }
+    }
+    private void eventoComprension(int pruebaActual)
+    {
+        // Por programar
+    }
     private void eventoFigIncompleta (int pruebaActual){
         if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+1) // Espera al evento de FigIncompleta
         {
@@ -269,6 +306,8 @@ public class capturaDeTextMeshPro : MonoBehaviour
             eventoVocabulario(pruebaActual);
             eventoAritmetica(pruebaActual);
             eventoInformacion(pruebaActual);
+            eventoLetrasNumeros(pruebaActual);
+            //eventoComprension(pruebaActual); // Por programar
             eventoFigIncompleta(pruebaActual);
             cuadroInput.text=""; // Reinicia el Input del usuario.
         }
