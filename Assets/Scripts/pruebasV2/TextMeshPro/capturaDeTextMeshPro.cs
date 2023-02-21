@@ -35,7 +35,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
     #endregion
     private int pruebaAnterior; // Mantiene el control en el update.
     private int terminaDigitos; // Oportunidades que tiene el usuario en la prueba de digitos
-    [SerializeField]
+    private int pruebasErroneasConsecutivas;
     private int terminaLetrasNumeros; // Oportunidades que tiene el usuario en la prueba de Numeros y Letras
     #region variables de GameObject de pruebas
     private GameObject  pruebasSemejanzas,
@@ -64,7 +64,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
         // variable para mantener el control en el update
         pruebaAnterior=-1;
         terminaDigitos=0;
-        terminaLetrasNumeros=0;
+        pruebasErroneasConsecutivas=0;
         #region Se inicializa los gameobjet de los eventos:
         pruebasSemejanzas = GameObject.Find("Eventos/Semejanzas");
         pruebasDigitos = GameObject.Find("Eventos/Digitos");
@@ -90,7 +90,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
         return contador;
     } 
 
-    private int contadorDePalabrasParaSemejanzas(string frase,string[] palabras) // Regresa el numero de palabras "Clave" que puso el usuario, comparando con el resultado.
+    private int contadorDePalabrasPuntuacion(string frase,string[] palabras) // Regresa el numero de palabras "Clave" que puso el usuario, comparando con el resultado.
     {
         
         for(int recorrePalabras=0;recorrePalabras<4;recorrePalabras++)
@@ -121,7 +121,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 print("Inicia Semejanzas");
             }
                 int cont = 0;
-                cont = contadorDePalabrasParaSemejanzas(cuadroDeTexto.text,respuestas);
+                cont = contadorDePalabrasPuntuacion(cuadroDeTexto.text,respuestas);
                 puntuacionSemejanzas = puntuacionSemejanzas + cont;
 
                 if(cont == 2)
@@ -257,7 +257,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
             if (pruebaActual % 3 == 0 && pruebaActual != 0) // Cada numero tres pruebas, se reinicia los intentos para no terminar
             {
-                terminaLetrasNumeros = 0; 
+                pruebasErroneasConsecutivas = 0; 
             }
             if(contadorDePalabras(cuadroDeTexto.text,respuestas)>0)
             {
@@ -265,19 +265,49 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 puntuacionLetrasNumeros++;
             }else{
                 print("Insuficiente");
-                terminaLetrasNumeros++;
+                pruebasErroneasConsecutivas++;
             }
             //Se termina los intentos de ese evento 
-            if(terminaLetrasNumeros == 3){ 
+            if(pruebasErroneasConsecutivas == 3){ 
                 pruebasLetrasNumeros.transform.GetChild(pruebaActual).gameObject.SetActive(false); // Se oculta la acutal de forma "manual"
-                print("Se termino la prueba de Digitos crecientes, por intentos");
+                print("Se termino la prueba de Letras y numeros, por intentos");
                 controlDeEventos.numDePrueba = numDePruebasLetrasNumeros;
+                pruebasErroneasConsecutivas = 0; // Reinicia los valores para la siguiente prueba
             }
         }
     }
     private void eventoComprension(int pruebaActual)
     {
-        // Por programar
+        if(controlDeEventos.numDeEvento==12 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasComprension+1) // Espera al evento de Puzzle Visual
+        {   
+            // Se extraen las respuestas de la prueba seleccionada
+            var respuestas = (string[])((pruebasComprension.transform.GetChild(pruebaActual).gameObject).GetComponent<respuestasDeTextMeshPro>().resultado).Clone();
+            if(pruebaActual == 0)
+            { // Anuncia el comienzo del evento
+                print("Inicia Comprension");
+            }
+            int cont = 0;
+            cont = contadorDePalabrasPuntuacion(cuadroDeTexto.text,respuestas);
+            puntuacionComprension = puntuacionComprension + cont;
+            if(cont == 2)
+            {
+                print("Sumas dos puntos");
+            }else if(cont == 1)
+            {
+                print("Sumas un punto");
+                pruebasErroneasConsecutivas=0;
+            }else{
+                print("Insuficiente");
+                pruebasErroneasConsecutivas++;
+            }
+            if(pruebasErroneasConsecutivas == 3){ 
+                pruebasComprension.transform.GetChild(pruebaActual).gameObject.SetActive(false); // Se oculta la acutal de forma "manual"
+                print("Se termino la prueba de Comprencion, por intentos");
+                controlDeEventos.numDePrueba = numDePruebasLetrasNumeros;
+                pruebasErroneasConsecutivas = 0; // Reinicia los valores para la siguiente prueba
+            }
+            
+        }
     }
     private void eventoFigIncompleta (int pruebaActual){
         if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+1) // Espera al evento de FigIncompleta
@@ -307,7 +337,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             eventoAritmetica(pruebaActual);
             eventoInformacion(pruebaActual);
             eventoLetrasNumeros(pruebaActual);
-            //eventoComprension(pruebaActual); // Por programar
+            eventoComprension(pruebaActual); 
             eventoFigIncompleta(pruebaActual);
             cuadroInput.text=""; // Reinicia el Input del usuario.
         }

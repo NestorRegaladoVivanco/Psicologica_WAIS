@@ -70,7 +70,7 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[6].text = "--";
         }
         // Puzzles visaules
-        else if(eventos.numDeEvento == 7 && eventos.numDePrueba == capturaDeToggles.numDePruebas)
+        else if(eventos.numDeEvento == 7 && eventos.numDePrueba == capturaDeToggles.numDePruebasPuzlesVisuales)
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[7].text = numToggles.puntuacionDePuzzleVisual.ToString();

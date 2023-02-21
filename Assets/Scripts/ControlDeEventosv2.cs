@@ -16,7 +16,10 @@ public class ControlDeEventosv2 : MonoBehaviour
         0 = cubos
         1 = cuadro de texto (textMesh Pro)
         2 = opciones5 (dropDown)
-        3 = opciones6 (Toggle)
+        3 = opciones6A (Toggle 2 x 3)
+        4 = opciones6B (Toggle 1 x 6) 
+        5 = ???
+
     */
 
     /* Orden de Eventos antiguos
@@ -38,14 +41,14 @@ public class ControlDeEventosv2 : MonoBehaviour
         3       -Matrices               - 2 106pdf
         4       -Vocabulario            - 1 (respuesta descriptiva)? 111pdf
         5       -Aritmetica             - 1 128pdf (agregar faltantes)
--       6       -Busqueda de Simbolos   - 4 mover imagen transparente
+-       6       -Busqueda de Simbolos   - 4  131pdf  termina:(120 seg en total) si termina antes, anotar el tiempo
         7       -Puzles Visuales        - 3
 -       8       -Informacion            - 1 145pdf
--       9       -Clave de numeros       - 4 mover imagen transparente
+-       9       -Clave de numeros       - 5 mover imagen transparente
 -       10      -Letras y numeros       - 1 159pdf
         11      -Balanzas               - 2
--       12      -Comprension            - 1 171pdf
--       13      -Cancelacion            - 4 mover imagen transparente
+-       12      -Comprension            - 1 169pdf
+-       13      -Cancelacion            - 5 mover imagen transparente
         14       -Figuras incompletas    - 1 (apuntar y escribir)?
     */ 
     #endregion
@@ -94,11 +97,14 @@ public class ControlDeEventosv2 : MonoBehaviour
             case 3: case 11: // opciones de 5 (dropDown)
                 numInterfaz =  2;
                 break;
-            case 7: // opciones de 6 (Toggle)
+            case 7: // opciones6A (Toggle 2 x 3)
                 numInterfaz =  3;
                 break;
-            case 6: case 9: case 13: // imagen transparente (Posicion?)
+            case 6: // opciones6B (Toggle 1 x 6) 
                 numInterfaz =  4;
+                break;
+            case 9: case 13: // imagen transparente (Posicion?)
+                numInterfaz =  5;
                 break;
             default: // error
                 numInterfaz =  -1;

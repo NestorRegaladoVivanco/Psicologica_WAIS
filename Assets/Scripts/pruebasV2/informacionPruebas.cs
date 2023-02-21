@@ -23,13 +23,13 @@ public class informacionPruebas : MonoBehaviour
             /*Matrices*/"Selecciona una de las 5 opciones que concuerda con la imagen de arriba.",
             /*Vocabulario*/"Imagen: Escribe el objeto de se muestra. \nPalabra: Escribe la definicion palabra que se muestra.",
             /*Aritmetica*/"Escribe lo que se indica el problema.",
-        /*Busqueda de Simbolos*/"Intrucciones Busqueda de simbolos",
+        /*Busqueda de Simbolos*/"Uno de los dos simbolos de la izquierda, estara o no en el conjunto de la derecha, por lo que debera marcar el simbolo que aparece o marcar que 'No', intente ser lo mas rapido que pueda.",
             /*PuzzlesVisuales*/"De las 6 opciones que se presenta, selecciona 3 para reconstruir el puzle presentado.",
         /*Informacion*/"Intrucciones Informacion",
         /*Clave de numeros*/"Intrucciones Clave de numeros",
         /*Letras y numeros*/"Colocar los numeros en orden creciente y las letras en orden alfabetico.",
             /*Balanzas*/"Selecciona entre las 5 opciones la pesa faltante para equilibrar los platillos.",
-        /*Comprension*/"Intrucciones Comprension",
+        /*Comprension*/"Responder a la pregunta que se muestra.",
         /*Cancelacion*/"Intrucciones Cancelacion",
             /*FigurasIncompletas*/"Escrible que es lo que le falta a la imagen."
         };
