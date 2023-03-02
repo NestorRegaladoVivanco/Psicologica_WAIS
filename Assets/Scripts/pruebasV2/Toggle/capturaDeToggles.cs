@@ -10,54 +10,57 @@ public class capturaDeToggles : MonoBehaviour
     private Toggle[] eleccionesA; // Formato 2 x 3
     [SerializeField]
     private Toggle[] eleccionesB; // Formato 1 x 6
-
+    
     [SerializeField]
     private ControlDeEventosv2   controlDeEventos;
 
     public static int numDePruebasBusquedaDeSimbolos=66;
     public static int numDePruebasPuzlesVisuales=28;
+    public static int numDePruebasCancelacion=4;
     
     private respuestaToggle[] resToggleBusquedaDeSimbolos = new respuestaToggle [numDePruebasBusquedaDeSimbolos];
     private respuestaToggle[] resTogglePuzzlesVisuales = new respuestaToggle [numDePruebasPuzlesVisuales];
-
+    private respuestaToggle[] resToggleCancelacion = new respuestaToggle [numDePruebasCancelacion];
+    
     public int puntuacionDeBusquedaDeSimbolos;
     public int puntuacionDePuzzleVisual;
+    public int puntuacionDeCancelacion;
 
     private int pruebaAnterior;
 
     // Start is called before the first frame update
     void Start()
     {   
-        inicializaResToggleBusquedaDeSimbolos();
-        inicializaResTogglePuzlesVisuales();
-
-        puntuacionDeBusquedaDeSimbolos=0;
-        puntuacionDePuzzleVisual=0;
-
-        pruebaAnterior=-1;
-    }
-
-    void inicializaResToggleBusquedaDeSimbolos()
-    {
+        // Inicializa respuestas de busquedaDeSimbolos
         GameObject busquedaDeSimbolos = GameObject.Find("Eventos/BusquedaDeSimbolos");
         for(int asignar=0;asignar < numDePruebasBusquedaDeSimbolos;asignar++)
         {
             resToggleBusquedaDeSimbolos[asignar] = (busquedaDeSimbolos.transform.GetChild(asignar).gameObject).GetComponent<respuestaToggle>();
         }
-    }
 
-    void inicializaResTogglePuzlesVisuales()
-    {
+        // Inicializa respuestas de PuzzlesVisuales
         GameObject puzzleVisual = GameObject.Find("Eventos/PuzzlesVisuales");
         for(int asignar=0;asignar < numDePruebasPuzlesVisuales;asignar++)
         {
             resTogglePuzzlesVisuales[asignar] = (puzzleVisual.transform.GetChild(asignar).gameObject).GetComponent<respuestaToggle>();
         }
+
+        // Inicializa respuestas de Cancelacion
+        GameObject cancelacion = GameObject.Find("Eventos/Cancelacion");
+        for(int asignar=0;asignar < numDePruebasCancelacion;asignar++)
+        {
+            resToggleCancelacion[asignar] = (cancelacion.transform.GetChild(asignar).gameObject).GetComponent<respuestaToggle>();
+        }
+
+        puntuacionDeBusquedaDeSimbolos=0;
+        puntuacionDePuzzleVisual=0;
+        puntuacionDeCancelacion=0;
+
+        pruebaAnterior=-1;
     }
 
-    private void eventoBusquedaDeSimbolos()
+    private void eventoBusquedaDeSimbolos(int pruebaBusqueda)
     {
-        int pruebaBusqueda = controlDeEventos.numDePrueba-1;
         if(controlDeEventos.numDeEvento==6 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasBusquedaDeSimbolos+1) // Espera al evento de Puzzle Visual
         {
             if(pruebaBusqueda == 0){ // Anuncia el comienzo del evento
@@ -87,9 +90,8 @@ public class capturaDeToggles : MonoBehaviour
         }
     }
 
-    private void eventoPuzzleVisual()
+    private void eventoPuzzleVisual(int pruebaPuzzle)
     {
-        int pruebaPuzzle = controlDeEventos.numDePrueba-1;
         if(controlDeEventos.numDeEvento==7 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasPuzlesVisuales+1) // Espera al evento de Puzzle Visual
         {
             if(pruebaPuzzle == 0){ // Anuncia el comienzo del evento
@@ -119,13 +121,52 @@ public class capturaDeToggles : MonoBehaviour
         }
     }
     
+    private void eventoCancelacion(int pruebaCancelacion)
+    {
+        if(controlDeEventos.numDeEvento==13 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasCancelacion+1) // Espera al evento de Cancelacion
+        {
+            // Asigna eleccionesC por cada prueba, ya que es de distintos cantidades
+            
+            GameObject cancelacionTogglesC = (GameObject.Find("Eventos/Cancelacion")).transform.GetChild(pruebaCancelacion).GetChild(0).gameObject;
+            Toggle[] eleccionesC = new Toggle[cancelacionTogglesC.transform.childCount]; // Formato para Cancelacion
+            for(int asignar=0;asignar < cancelacionTogglesC.transform.childCount;asignar++)
+            {
+                eleccionesC[asignar] = (cancelacionTogglesC.transform.GetChild(asignar).gameObject).GetComponent<Toggle>();
+            }
+
+            if(pruebaCancelacion == 0){ // Anuncia el comienzo del evento
+                print("Inicia Cancelacion");
+            }
+            print("Prueba: "+(pruebaCancelacion));
+            for(int recorre = 0; recorre < resToggleCancelacion[pruebaCancelacion].respuestas.Length ; recorre++) // Comprueba el resultado
+            {
+                
+                if(resToggleCancelacion[pruebaCancelacion].respuestas[recorre])
+                {
+                    print((eleccionesC[recorre]).isOn +" / "+resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
+                    print((eleccionesC[recorre]).isOn == resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
+                
+                    if((eleccionesC[recorre]).isOn == resToggleCancelacion[pruebaCancelacion].respuestas[recorre])
+                    {
+                        print("Posicion: "+recorre + " es Correcta" );
+                        puntuacionDeCancelacion = puntuacionDeCancelacion+1;
+                    }else{
+                        print("Posicion: "+recorre + " es Incorrecta" );
+                    }
+                }
+                //Resetea el estado de los Toggle para el siguiente prueba
+                (eleccionesC[recorre]).isOn=false;
+            }
+        }
+    }
 
     void Update(){
         if(pruebaAnterior!=controlDeEventos.numDePrueba){
             pruebaAnterior=controlDeEventos.numDePrueba;
-            eventoBusquedaDeSimbolos();
-            eventoPuzzleVisual();
+            int pruebaActual = controlDeEventos.numDePrueba-1;
+            eventoBusquedaDeSimbolos(pruebaActual);
+            eventoPuzzleVisual(pruebaActual);
+            eventoCancelacion(pruebaActual);
         }
     }
-
 }
