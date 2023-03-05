@@ -18,7 +18,7 @@ public class ControlDeEventosv2 : MonoBehaviour
         2 = opciones5 (dropDown)
         3 = opciones6A (Toggle 2 x 3)
         4 = opciones6B (Toggle 1 x 6) 
-        5 = ???
+        5 = Sin asignar
 
     */
 

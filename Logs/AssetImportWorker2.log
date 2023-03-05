@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2021.2/staging' branch; Version is '2021.2.4f1 (99ba6aa4c552) revision 10074730'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10 Home; OS build 22621.1265; Version 2009; 64bit' Language: 'es' Physical Memory: 32605 MB
+OS: 'Windows 10 Home; OS build 22621.1344; Version 2009; 64bit' Language: 'es' Physical Memory: 32605 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -15,7 +15,7 @@ D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-53164
+58492
 Successfully changed project path to: D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS
 D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 140.33 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 152.74 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.2.4f1 (99ba6aa4c552)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/Resources/UnitySubsystems
@@ -58,84 +58,84 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 3060 Ti (ID=0x2489)
     Vendor:   NVIDIA
     VRAM:     8038 MB
-    Driver:   31.0.15.2849
+    Driver:   31.0.15.3118
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56328
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56244
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.006596 seconds.
+Registered in 0.005128 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 138.87 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 136.66 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.954 seconds
+- Completed reload, in  1.575 seconds
 Domain Reload Profiling:
-	ReloadAssembly (954ms)
-		BeginReloadAssembly (108ms)
+	ReloadAssembly (1575ms)
+		BeginReloadAssembly (244ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (718ms)
-			LoadAssemblies (106ms)
+		EndReloadAssembly (1046ms)
+			LoadAssemblies (241ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (146ms)
+			SetupTypeCache (523ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (432ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (413ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (22ms)
+				InitializePlatformSupportModulesInManaged (21ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (139ms)
-				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (197ms)
-				ProcessInitializeOnLoadMethodAttributes (72ms)
+				RefreshPlugins (137ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (177ms)
+				ProcessInitializeOnLoadMethodAttributes (74ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005597 seconds.
+Registered in 0.006562 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 127.06 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 131.75 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.424 seconds
+- Completed reload, in  4.064 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2425ms)
-		BeginReloadAssembly (240ms)
+	ReloadAssembly (4065ms)
+		BeginReloadAssembly (233ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (2056ms)
-			LoadAssemblies (130ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (3707ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (341ms)
+			SetupTypeCache (647ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (76ms)
-			SetupLoadedEditorAssemblies (1370ms)
+			RebuildScriptCaches (87ms)
+			SetupLoadedEditorAssemblies (2612ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (14ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (127ms)
-				BeforeProcessingInitializeOnLoad (132ms)
-				ProcessInitializeOnLoadAttributes (1044ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				RefreshPlugins (132ms)
+				BeforeProcessingInitializeOnLoad (121ms)
+				ProcessInitializeOnLoadAttributes (2271ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (11ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -153,12 +153,264 @@ Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
 Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
 Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 1.38 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3909 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 43 unused Assets / (224.5 KB). Loaded Objects now: 4359.
-Memory consumption went from 149.7 MB to 149.4 MB.
-Total: 4.312700 ms (FindLiveObjects: 0.350500 ms CreateObjectMapping: 0.186500 ms MarkObjects: 3.536900 ms  DeleteObjects: 0.236300 ms)
+Memory consumption went from 149.7 MB to 149.5 MB.
+Total: 6.783800 ms (FindLiveObjects: 0.498500 ms CreateObjectMapping: 0.417100 ms MarkObjects: 5.556200 ms  DeleteObjects: 0.309600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 214560.092855 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/DfPd3C4rkt.png
+  artifactKey: Guid(2a7fe75e66311da49a420d78417fc741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/DfPd3C4rkt.png using Guid(2a7fe75e66311da49a420d78417fc741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cbe9ccd806c220eed01205ffd559a20') in 0.181348 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 310.777866 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/I7MbUWjCZs.png
+  artifactKey: Guid(9f3aecac7ff5a24498a589b8658992e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/I7MbUWjCZs.png using Guid(9f3aecac7ff5a24498a589b8658992e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b03522944063aa75c87ab926bc1d881f') in 0.034093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.722978 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/Cancelacion.png
+  artifactKey: Guid(9f3aecac7ff5a24498a589b8658992e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/Cancelacion.png using Guid(9f3aecac7ff5a24498a589b8658992e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac4cfdf7d861fe2bbc7e4936e2e5406e') in 0.766228 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1337.147002 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/claveDeNumeros.png
+  artifactKey: Guid(a02cabfcbdf98e440a5e3e6b8857e2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/claveDeNumeros.png using Guid(a02cabfcbdf98e440a5e3e6b8857e2a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '389356f90717dae7ef57dec97ac3d164') in 0.370001 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007665 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.745 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1746ms)
+		BeginReloadAssembly (196ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (59ms)
+		EndReloadAssembly (1395ms)
+			LoadAssemblies (110ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (355ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (76ms)
+			SetupLoadedEditorAssemblies (645ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (460ms)
+				ProcessInitializeOnLoadMethodAttributes (55ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.14 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3906 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (191.3 KB). Loaded Objects now: 4431.
+Memory consumption went from 156.3 MB to 156.1 MB.
+Total: 4.613700 ms (FindLiveObjects: 0.411100 ms CreateObjectMapping: 0.271800 ms MarkObjects: 3.737000 ms  DeleteObjects: 0.192100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1027.544085 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/letrasYnumeros.jpg
+  artifactKey: Guid(a50fb2925374e2141bf357ffb4f1c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/letrasYnumeros.jpg using Guid(a50fb2925374e2141bf357ffb4f1c931) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a4e2a73bb2b542ef77be6d2656be034') in 0.107587 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005550 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.97 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.831 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1847ms)
+		BeginReloadAssembly (207ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (55ms)
+		EndReloadAssembly (1472ms)
+			LoadAssemblies (124ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (375ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (709ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (511ms)
+				ProcessInitializeOnLoadMethodAttributes (56ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3905 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (191.5 KB). Loaded Objects now: 4451.
+Memory consumption went from 156.7 MB to 156.6 MB.
+Total: 4.476800 ms (FindLiveObjects: 0.360400 ms CreateObjectMapping: 0.171000 ms MarkObjects: 3.782900 ms  DeleteObjects: 0.160900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 290.549725 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPruebas/comprension.png
+  artifactKey: Guid(d7d9d93fa31225e4ba08e80a63048d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPruebas/comprension.png using Guid(d7d9d93fa31225e4ba08e80a63048d7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d4509f9d2c1cb663800cad05aefc68') in 0.115717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.853712 seconds.
+  path: Assets/Scenes/Game.unity
+  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c651aa33a2a7cf82013e4893a016454') in 0.008748 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009122 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.764 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1765ms)
+		BeginReloadAssembly (200ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (56ms)
+		EndReloadAssembly (1399ms)
+			LoadAssemblies (126ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (362ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (78ms)
+			SetupLoadedEditorAssemblies (660ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (118ms)
+				ProcessInitializeOnLoadAttributes (464ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.21 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3905 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (190.9 KB). Loaded Objects now: 4471.
+Memory consumption went from 157.9 MB to 157.8 MB.
+Total: 5.118300 ms (FindLiveObjects: 0.391400 ms CreateObjectMapping: 0.234600 ms MarkObjects: 4.323400 ms  DeleteObjects: 0.167000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -174,41 +426,41 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.006038 seconds.
+Registered in 0.007260 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.91 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.96 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.594 seconds
+- Completed reload, in  1.887 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1595ms)
-		BeginReloadAssembly (205ms)
+	ReloadAssembly (1888ms)
+		BeginReloadAssembly (204ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
+			DisableScriptedObjects (16ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (58ms)
-		EndReloadAssembly (1269ms)
+			CreateAndSetChildDomain (72ms)
+		EndReloadAssembly (1550ms)
 			LoadAssemblies (123ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (338ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (57ms)
-			SetupLoadedEditorAssemblies (610ms)
+			SetupTypeCache (461ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (698ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
+				InitializePlatformSupportModulesInManaged (19ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (98ms)
-				ProcessInitializeOnLoadAttributes (445ms)
-				ProcessInitializeOnLoadMethodAttributes (40ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (508ms)
+				ProcessInitializeOnLoadMethodAttributes (57ms)
 				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (14ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
 Platform modules already initialized, skipping
 Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
 Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
@@ -223,12 +475,228 @@ Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
 Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
 Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
 Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
-Refreshing native plugins compatible for Editor in 1.02 ms, found 4 plugins.
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3904 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (191.3 KB). Loaded Objects now: 4361.
-Memory consumption went from 149.5 MB to 149.4 MB.
-Total: 5.007000 ms (FindLiveObjects: 0.377600 ms CreateObjectMapping: 0.189900 ms MarkObjects: 4.227000 ms  DeleteObjects: 0.210400 ms)
+Unloading 32 unused Assets / (191.2 KB). Loaded Objects now: 4473.
+Memory consumption went from 157.9 MB to 157.7 MB.
+Total: 5.619600 ms (FindLiveObjects: 0.706500 ms CreateObjectMapping: 0.387000 ms MarkObjects: 4.334400 ms  DeleteObjects: 0.189200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 236.636744 seconds.
+  path: Assets/MisTexturas/Interfaz/menuPrincipal/Logo.png
+  artifactKey: Guid(92d34d5c9f96a7c46b804bf669e9e0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/MisTexturas/Interfaz/menuPrincipal/Logo.png using Guid(92d34d5c9f96a7c46b804bf669e9e0a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '243f6ce38c400e0eb7821b5dbc535fdb') in 0.095677 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005484 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.99 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.795 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1796ms)
+		BeginReloadAssembly (220ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (16ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1419ms)
+			LoadAssemblies (142ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (346ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (680ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (500ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.04 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3905 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (191.2 KB). Loaded Objects now: 4493.
+Memory consumption went from 159.2 MB to 159.0 MB.
+Total: 4.958900 ms (FindLiveObjects: 0.489800 ms CreateObjectMapping: 0.246100 ms MarkObjects: 3.969100 ms  DeleteObjects: 0.250900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005148 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.722 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1723ms)
+		BeginReloadAssembly (178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1402ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (366ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (81ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (123ms)
+				ProcessInitializeOnLoadAttributes (453ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.00 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3904 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (191.2 KB). Loaded Objects now: 4495.
+Memory consumption went from 159.2 MB to 159.0 MB.
+Total: 5.940800 ms (FindLiveObjects: 1.481900 ms CreateObjectMapping: 0.275100 ms MarkObjects: 4.000100 ms  DeleteObjects: 0.181600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005784 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Usuarios\Nestor\Documentos\Escuela\Modular\Unity\Psicologica_WAIS\Library\PackageCache\com.unity.visualscripting@1.7.5\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.94 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.655 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1657ms)
+		BeginReloadAssembly (180ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (61ms)
+		EndReloadAssembly (1351ms)
+			LoadAssemblies (114ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (345ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (623ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (452ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Platform modules already initialized, skipping
+Failed to load shader (instanceID 412, GUID dd89cf5b9246416f84610a006f916af7)
+Failed to load shader (instanceID 414, GUID 14eb328de4b8eb245bb7cea29e4ac00b)
+Failed to load shader (instanceID 416, GUID 68e6db2ebdc24f95958faec2be5558d6)
+Failed to load shader (instanceID 418, GUID bc1ede39bf3643ee8e493720e4259791)
+Failed to load shader (instanceID 408, GUID fe393ace9b354375a9cb14cdbbc28be4)
+Failed to load shader (instanceID 410, GUID cf81c85f95fe47e1a27f6ae460cf182c)
+Failed to load shader (instanceID 420, GUID 48bb5f55d8670e349b6e614913f9d910)
+Failed to load shader (instanceID 422, GUID 85187c2149c549c5b33f0cdb02836b17)
+Failed to load shader (instanceID 424, GUID 128e987d567d4e2c824d754223b3f3b0)
+Failed to load shader (instanceID 432, GUID f7ada0af4f174f0694ca6a487b8f543d)
+Failed to load shader (instanceID 428, GUID a02a7d8c237544f1962732b55a9aebf1)
+Failed to load shader (instanceID 430, GUID c8d12adcee749c344b8117cf7c7eb912)
+Failed to load shader (instanceID 426, GUID 1e3b057af24249748ff873be7fafee47)
+Refreshing native plugins compatible for Editor in 1.22 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3904 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (191.3 KB). Loaded Objects now: 4497.
+Memory consumption went from 159.2 MB to 159.0 MB.
+Total: 7.862000 ms (FindLiveObjects: 0.404900 ms CreateObjectMapping: 0.354400 ms MarkObjects: 6.849000 ms  DeleteObjects: 0.250700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 

@@ -64,10 +64,10 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[5].text = numTextMeshPro.puntuacionAritmetica.ToString();
         }
         // Busqueda de simbolos
-        else if(eventos.numDeEvento == 6 && eventos.numDePrueba == /*numDePruebasBusquedaDeSimbolos + */18)
+        else if(eventos.numDeEvento == 6 && eventos.numDePrueba == capturaDeToggles.numDePruebasBusquedaDeSimbolos)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[6].text = "--";
+            cuadroDeTextoInstrucciones[6].text = numToggles.puntuacionDeBusquedaDeSimbolos.ToString();
         }
         // Puzzles visaules
         else if(eventos.numDeEvento == 7 && eventos.numDePrueba == capturaDeToggles.numDePruebasPuzlesVisuales)
@@ -82,10 +82,10 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[8].text = numTextMeshPro.puntuacionInformacion.ToString();
         }
         // Clave de numeros
-        else if(eventos.numDeEvento == 9 && eventos.numDePrueba == /*numDePruebasClaveDeNumeros +*/18)
+        else if(eventos.numDeEvento == 9 && eventos.numDePrueba == capturaDeDropdawn.numDePruebasClaveDeNumeros)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[9].text = "--";
+            cuadroDeTextoInstrucciones[9].text = numDropdawn.respuestasCorrectasClaveDeNumeros.ToString();
         }
          // Letras y numeros
         else if(eventos.numDeEvento == 10 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasLetrasNumeros)
@@ -106,10 +106,10 @@ public class puntuacionDeEventos : MonoBehaviour
             cuadroDeTextoInstrucciones[12].text = numTextMeshPro.puntuacionComprension.ToString();
         }
         // Cancelacion
-        else if(eventos.numDeEvento == 13 && eventos.numDePrueba == /*numDePruebasCancelacion +*/18)
+        else if(eventos.numDeEvento == 13 && eventos.numDePrueba == capturaDeToggles.numDePruebasCancelacion)
         { 
             puntos.SetActive(true);
-            cuadroDeTextoInstrucciones[13].text = "--";
+            cuadroDeTextoInstrucciones[13].text = numToggles.puntuacionDeCancelacion.ToString();
         }
         // Figuras incompletas
         else if(eventos.numDeEvento == 14 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasFigIncompleta)
