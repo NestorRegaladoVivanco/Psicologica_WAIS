@@ -114,6 +114,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:ROSLYN_ANALYZER_FIX
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/Managed/UnityEditor.Graphs.dll"
@@ -321,17 +322,11 @@
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Runtime.Serialization.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.4f1/Editor/Data/UnityReferenceAssemblies/unity-4.8-api/System.Xml.Linq.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Pdb.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.CodeGen/Unity.Burst.Cecil.Rocks.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.burst@1.6.0/Unity.Burst.Unsafe.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@1.15.1/Lib/Editor/PlasticSCM/log4netPlastic.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@1.15.1/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@1.15.1/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@1.15.1/Lib/Editor/PlasticSCM/unityplastic.dll"
+-r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@2.0.7/Lib/Editor/PlasticSCM/log4netPlastic.dll"
+-r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@2.0.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll"
+-r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@2.0.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
+-r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.collab-proxy@2.0.7/Lib/Editor/PlasticSCM/unityplastic.dll"
 -r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll"
--r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.visualscripting@1.7.5/Editor/VisualScripting.Core/Dependencies/DotNetZip/Unity.VisualScripting.IonicZip.dll"
 -r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.visualscripting@1.7.5/Editor/VisualScripting.Core/Dependencies/YamlDotNet/Unity.VisualScripting.YamlDotNet.dll"
 -r:"D:/Usuarios/Nestor/Documentos/Escuela/Modular/Unity/Psicologica_WAIS/Library/PackageCache/com.unity.visualscripting@1.7.5/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
@@ -339,14 +334,14 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/AssemblyNameProvider.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/FileIO.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/GUIDGenerator.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/ProjectGeneration.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/ProjectGenerationFlag.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/ProjectGeneration/StringUtils.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/VSCodeDiscovery.cs"
-"Library/PackageCache/com.unity.ide.vscode@1.2.4/Editor/VSCodeScriptEditor.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/AssemblyNameProvider.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/FileIO.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/GUIDGenerator.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGenerationFlag.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/StringUtils.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeDiscovery.cs"
+"Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/VSCodeScriptEditor.cs"
 -langversion:9.0
 
 /deterministic
