@@ -110,7 +110,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
         return 0;
     } 
     // ---Eventos----
-    private void eventoSemejanzas(int pruebaActual)
+    public void eventoSemejanzas(int pruebaActual)
     {
         if(controlDeEventos.numDeEvento==1 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasSemejanzas+1) // Espera al evento de Puzzle Visual
         {   
@@ -135,7 +135,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
                 }
             }
     }
-    private void eventoDigitos(int pruebaActual){
+    public void eventoDigitos(int pruebaActual){
         if(controlDeEventos.numDeEvento==2 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasDigitos+1) // Espera al evento de Puzzle Visual
         {
             // Se extraen las respuestas de la prueba seleccionada
@@ -178,7 +178,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
-    private void eventoVocabulario(int pruebaActual)
+    public void eventoVocabulario(int pruebaActual)
     {
         if(controlDeEventos.numDeEvento==4 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasVocabulario+1) // Espera al evento de Puzzle Visual
         {
@@ -211,7 +211,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
-    private void eventoAritmetica(int pruebaActual){
+    public void eventoAritmetica(int pruebaActual){
         if(controlDeEventos.numDeEvento==5 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasAritmetica+1) // Espera al evento de Puzzle Visual
         {
             // Se extraen las respuestas de la prueba seleccionada
@@ -228,7 +228,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
-    private void eventoInformacion(int pruebaActual){
+    public void eventoInformacion(int pruebaActual){
         if(controlDeEventos.numDeEvento==8 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasInformacion+1) // Espera al evento de Informacion
         {
             // Se extraen las respuestas de la prueba seleccionada
@@ -245,7 +245,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
-    private void eventoLetrasNumeros(int pruebaActual)
+    public void eventoLetrasNumeros(int pruebaActual)
     {
         
         if(controlDeEventos.numDeEvento==10 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasLetrasNumeros+1) // Espera al evento de Puzzle Visual
@@ -276,7 +276,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             }
         }
     }
-    private void eventoComprension(int pruebaActual)
+    public void eventoComprension(int pruebaActual)
     {
         if(controlDeEventos.numDeEvento==12 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasComprension+1) // Espera al evento de Puzzle Visual
         {   
@@ -309,7 +309,7 @@ public class capturaDeTextMeshPro : MonoBehaviour
             
         }
     }
-    private void eventoFigIncompleta (int pruebaActual){
+    public void eventoFigIncompleta (int pruebaActual){
         if(controlDeEventos.numDeEvento==14 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasFigIncompleta+1) // Espera al evento de FigIncompleta
         {
             // Se extraen las respuestas de la prueba seleccionada

@@ -17,7 +17,7 @@ public class informacionPruebas : MonoBehaviour
         burbujaDeTexto = GameObject.Find("Canvas/Interfaz/Basica/burbujaDeInstrucciones");
         instruccionesEventos = new string []{ // Son los textos de ayuda que muestra el globo de intrucciones, para cada evento.
 
-            /*Cubos*/"Imita la imagen de la derecha utilizando los cubos, moviendolos con el raton y utilizando las flechas para rotar el cubo asta conseguir que sean iguales.",
+            /*Cubos*/"Imita la imagen de la izquierda utilizando los cubos, moviendolos con el raton y utilizando las flechas para rotar el cubo asta conseguir que sean iguales.",
             /*Semejanzas*/"Responder a la pregunta que se muestra en el problema.",
             /*Digitos*/"Escuche con atencion tras darle al boton podra escuchar una sola vez y tendra que poner los digitos en el orden indicado.",
             /*Matrices*/"Selecciona una de las 5 opciones que concuerda con la imagen de arriba.",

@@ -59,7 +59,7 @@ public class capturaDeToggles : MonoBehaviour
         pruebaAnterior=-1;
     }
 
-    private void eventoBusquedaDeSimbolos(int pruebaBusqueda)
+    public void eventoBusquedaDeSimbolos(int pruebaBusqueda)
     {
         if(controlDeEventos.numDeEvento==6 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasBusquedaDeSimbolos+1) // Espera al evento de Puzzle Visual
         {
@@ -90,7 +90,7 @@ public class capturaDeToggles : MonoBehaviour
         }
     }
 
-    private void eventoPuzzleVisual(int pruebaPuzzle)
+    public void eventoPuzzleVisual(int pruebaPuzzle)
     {
         if(controlDeEventos.numDeEvento==7 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasPuzlesVisuales+1) // Espera al evento de Puzzle Visual
         {
@@ -121,7 +121,7 @@ public class capturaDeToggles : MonoBehaviour
         }
     }
     
-    private void eventoCancelacion(int pruebaCancelacion)
+    public void eventoCancelacion(int pruebaCancelacion)
     {
         if(controlDeEventos.numDeEvento==13 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasCancelacion+1) // Espera al evento de Cancelacion
         {
@@ -129,6 +129,7 @@ public class capturaDeToggles : MonoBehaviour
             
             GameObject cancelacionTogglesC = (GameObject.Find("Eventos/Cancelacion")).transform.GetChild(pruebaCancelacion).GetChild(0).gameObject;
             Toggle[] eleccionesC = new Toggle[cancelacionTogglesC.transform.childCount]; // Formato para Cancelacion
+            //print("+++++++cancelacionTogglesC.transform.childCount "+cancelacionTogglesC.transform.childCount);
             for(int asignar=0;asignar < cancelacionTogglesC.transform.childCount;asignar++)
             {
                 eleccionesC[asignar] = (cancelacionTogglesC.transform.GetChild(asignar).gameObject).GetComponent<Toggle>();
@@ -143,8 +144,8 @@ public class capturaDeToggles : MonoBehaviour
                 
                 if(resToggleCancelacion[pruebaCancelacion].respuestas[recorre])
                 {
-                    print((eleccionesC[recorre]).isOn +" / "+resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
-                    print((eleccionesC[recorre]).isOn == resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
+                    //print((eleccionesC[recorre]).isOn +" / "+resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
+                    //print((eleccionesC[recorre]).isOn == resToggleCancelacion[pruebaCancelacion].respuestas[recorre]);
                 
                     if((eleccionesC[recorre]).isOn == resToggleCancelacion[pruebaCancelacion].respuestas[recorre])
                     {
@@ -155,7 +156,7 @@ public class capturaDeToggles : MonoBehaviour
                     }
                 }
                 //Resetea el estado de los Toggle para el siguiente prueba
-                (eleccionesC[recorre]).isOn=false;
+                //(eleccionesC[recorre]).isOn=false;
             }
         }
     }

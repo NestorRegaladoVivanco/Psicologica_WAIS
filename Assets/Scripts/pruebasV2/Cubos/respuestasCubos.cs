@@ -5,6 +5,7 @@ using UnityEngine;
 public class respuestasCubos : MonoBehaviour
 {
     public int limite;
+    public Vector3[] respuestas;
 
     // Start is called before the first frame update
     void Start()

@@ -6,7 +6,9 @@ public class ControlDeEventosv2 : MonoBehaviour
 {
     public int  numDeEvento,
                 numDePrueba,
-                numDePruebaSeleccionada;
+                // Datos de la escena anterior
+                numDePruebaSeleccionada,
+                numDeIdentificador;
 
     private bool terminar=false;
     private int pruebaAnterior;
@@ -21,17 +23,6 @@ public class ControlDeEventosv2 : MonoBehaviour
         5 = Sin asignar
 
     */
-
-    /* Orden de Eventos antiguos
-    numDeEvento  -nombre             - numDeInterfaz
-        0       -Cubos                  - 0
-        1       -Matrices               - 2
-        2       -Vocabulario            - 1 (respuesta descriptiva)?
-        3       -Aritmetica             - 1
-        4       -Puzles Visuales        - 3
-        5       -Balanzas               - 2
-        6       -Figuras incompletas    - 1 (apuntar y escribir)?
-    */ 
 
     /* Orden de los eventos faltantes
     numDeEvento  -nombre             - numDeInterfaz
@@ -57,6 +48,9 @@ public class ControlDeEventosv2 : MonoBehaviour
     {//Se utiliza para hacer pruebas en un evento especifico o para cuando el usuario selecciona un evento.
         //Se captura la prueba selecciona de la pantalla del menu
         numDePruebaSeleccionada=ControlDeEscenas.eventoSeleccionado;
+        //Se captura el identificador del usuario de la pantalla del menu
+        numDeIdentificador=ControlDeEscenas.identificadorDePrueba;
+
         //Si se selecciono uno, se le asigna al numDeEvento, sino pasa a ser 0
         if(numDePruebaSeleccionada!=-1){
             numDeEvento=numDePruebaSeleccionada;

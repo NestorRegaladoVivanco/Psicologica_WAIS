@@ -58,7 +58,7 @@ public class capturaDeDropdawn : MonoBehaviour
         pruebaAnterior=-1;
     }
 
-    private void eventoBalanzas(int pruebaActual)
+    public void eventoBalanzas(int pruebaActual)
     {
         if(controlDeEventos.numDeEvento==11 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasBalanzas+1) // Espera al evento de Puzzle Visual
         {
@@ -78,7 +78,7 @@ public class capturaDeDropdawn : MonoBehaviour
         }
     }
 
-    private void eventoMatrices(int pruebaActual){
+    public void eventoMatrices(int pruebaActual){
         if(controlDeEventos.numDeEvento==3 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasMatricez+1) // Espera al evento de Puzzle Visual
         {
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
@@ -97,7 +97,7 @@ public class capturaDeDropdawn : MonoBehaviour
         }
     }
 
-    private void eventoClaveDeNumeros(int pruebaActual){
+    public void eventoClaveDeNumeros(int pruebaActual){
         if(controlDeEventos.numDeEvento==9 && controlDeEventos.numDePrueba>0 && controlDeEventos.numDePrueba<numDePruebasMatricez+1) // Espera al evento de Clave De Numeros
         {
             if(pruebaActual == 0){ // Anuncia el comienzo del evento
@@ -122,7 +122,6 @@ public class capturaDeDropdawn : MonoBehaviour
 
     void Update(){
         if(pruebaAnterior!=controlDeEventos.numDePrueba){
-            print("a");
             pruebaAnterior=controlDeEventos.numDePrueba;
             int pruebaActual = controlDeEventos.numDePrueba-1; // Control del orden de la prueba actual.
             eventoMatrices(pruebaActual);

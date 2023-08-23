@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 public class ControlDeEscenas : MonoBehaviour
 {
     static public int eventoSeleccionado;
+    static public int identificadorDePrueba;
     // Start is called before the first frame update
     public void LoadGame()
     {
-        eventoSeleccionado=-1;
+        eventoSeleccionado = -1;
+        identificadorDePrueba = 1;
         SceneManager.LoadScene("Game");
     }
 
