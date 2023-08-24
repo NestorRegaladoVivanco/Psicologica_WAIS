@@ -7,8 +7,8 @@ public class ControlDeEventosv2 : MonoBehaviour
     public int  numDeEvento,
                 numDePrueba,
                 // Datos de la escena anterior
-                numDePruebaSeleccionada,
-                numDeIdentificador;
+                numDePruebaSeleccionada;
+    public string numDeIdentificador;
 
     private bool terminar=false;
     private int pruebaAnterior;

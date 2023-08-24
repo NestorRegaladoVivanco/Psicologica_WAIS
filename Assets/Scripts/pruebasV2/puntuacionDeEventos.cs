@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-
+using UnityEditor;
 using System.Net.Http;
 using System.Threading.Tasks;
-using UnityEditor;
+
 
 public class puntuacionDeEventos : MonoBehaviour
 {
@@ -28,6 +28,7 @@ public class puntuacionDeEventos : MonoBehaviour
 
     private int pruebaAnterior;
 
+    string url;
     GameObject carga;
 
     //string bandera = "https://testpsicologicow.000webhostapp.com/modPuntuaciones/modBandera.php?id="+eventos.numDeIdentificador+"&bandera="+cuadroDeTextoInstrucciones[eventos.numDeEvento].text;
@@ -35,11 +36,13 @@ public class puntuacionDeEventos : MonoBehaviour
     void Start()
     {
         pruebaAnterior=-1;
+        carga = GameObject.Find("Canvas/Spinner");
+        carga.SetActive(false);
     }
 
     private void mostrarPuntos()
     {   // Cubos
-        string url = "";
+        url = "";
 
         if(eventos.numDeEvento == 0 && eventos.numDePrueba == capturaCubo.numDePruebasCubos)
         { 
@@ -53,7 +56,7 @@ public class puntuacionDeEventos : MonoBehaviour
         { 
             puntos.SetActive(true);
             cuadroDeTextoInstrucciones[1].text = numTextMeshPro.puntuacionSemejanzas.ToString();
-            url = "https://testpsicologicow.000webhostapp.com/modPuntuaciones/modSemejanzas.php?id="+eventos.numDeIdentificador+"&sem{}="+cuadroDeTextoInstrucciones[eventos.numDeEvento].text;
+            url = "https://testpsicologicow.000webhostapp.com/modPuntuaciones/modSemejanzas.php?id="+eventos.numDeIdentificador+"&sem="+cuadroDeTextoInstrucciones[eventos.numDeEvento].text;
         }
         // Digitos 
         else if(eventos.numDeEvento == 2 && eventos.numDePrueba == capturaDeTextMeshPro.numDePruebasDigitos)
@@ -149,37 +152,34 @@ public class puntuacionDeEventos : MonoBehaviour
         else{
             puntos.SetActive(false);
         }
+
+        // Si se actualizo puntuacion, se envia a la base de datos el cambio
         if (url != ""){
+            Debug.Log("Se envia el url: " + url);
             cargarPuntos(url);
         }
     }
 
     public async Task cargarPuntos(string url)
     {
-        string id;
-        Debug.Log("La oracion es " + url);
+        Debug.Log("Se recibe: " + url);
         HttpClient cliente = new HttpClient();
 
         //los datos de boton de cargar
         carga.SetActive(true);
         string httpResponse = await cliente.GetStringAsync(url);
-        //hilo de ejecucion
-        //tronar la carga 
         carga.SetActive(false);
+        Debug.Log("Responde con: " + httpResponse.ToString());
 
-        Debug.Log("var es " + httpResponse.ToString());
-        string[] info = new string[3];
-        info = httpResponse.Split(',');
-
-        if (httpResponse != "0,0,0")
+        if (httpResponse == "1")
         {
-            id = info[0];
             Debug.Log("Se gardaron las puntuaciones");
         }
         else
         {
-            EditorUtility.DisplayDialog("Usuario", "Datos incorrectos intente de nuevo ", "OK");
+            Debug.Log("Se encontro un problema al subir las puntuaciones");
         }
+        url = "";
     }
 
     void Update(){
