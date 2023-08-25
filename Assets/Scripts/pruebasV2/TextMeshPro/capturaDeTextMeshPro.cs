@@ -303,10 +303,9 @@ public class capturaDeTextMeshPro : MonoBehaviour
             if(pruebasErroneasConsecutivas == 3){ 
                 pruebasComprension.transform.GetChild(pruebaActual).gameObject.SetActive(false); // Se oculta la acutal de forma "manual"
                 print("Se termino la prueba de Comprencion, por intentos");
-                controlDeEventos.numDePrueba = numDePruebasLetrasNumeros;
+                controlDeEventos.numDePrueba = numDePruebasComprension;
                 pruebasErroneasConsecutivas = 0; // Reinicia los valores para la siguiente prueba
             }
-            
         }
     }
     public void eventoFigIncompleta (int pruebaActual){
