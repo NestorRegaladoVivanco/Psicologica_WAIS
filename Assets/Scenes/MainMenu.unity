@@ -1800,6 +1800,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 926fd916224b5da4093ead1ac471e77e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game:
+    active: 0
+    aritmetica: 0
+    balanzas: 0
+    busquedaS: 0
+    cancelacion: 0
+    claveNum: 0
+    codigo: 
+    comprension: 0
+    cubos: 0
+    digitos: 0
+    figCompleta: 0
+    id: 
+    idCliente: 
+    letrasNum: 0
+    matriz: 0
+    pluzzeV: 0
+    ptnInformacion: 0
+    semejanzas: 0
+    taritmetica: 0
+    tbalanzas: 0
+    tbusquedaS: 0
+    tcancelacion: 0
+    tclaveNum: 0
+    tcomprension: 0
+    tcubos: 0
+    tdigitos: 0
+    tfigCompleta: 0
+    tletrasNum: 0
+    tmatriz: 0
+    tpluzzeV: 0
+    tptnInformacion: 0
+    tsemejanzas: 0
+    tvocabulario: 0
+    vocabulario: 0
 --- !u!1 &1450154466
 GameObject:
   m_ObjectHideFlags: 0
@@ -2254,7 +2289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Codigo de la prueba,,,
+  m_text: Codigo de la prueba...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
